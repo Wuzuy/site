@@ -4,130 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Sandin - Currículo</title>
-
-    <meta property="og:title" content="Currículo - Lucas Sandin">
-    <meta property="og:description"
-        content="Portfólio de Lucas Sandin. Desenvolvedor Fullstack e estudante de Engenharia de Software. Para entrar em contato, envie um email para lucaslimasandin@gmail.com.">
-    <meta property="og:type" content="website">
-
-    <link
-        href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap)"
-        rel="stylesheet">
+    <title>Lucas Matheus - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dark-mode">
-
-    <button id="hamburger-btn" aria-label="Menu">&#9776;</button>
-
-    <nav id="sidebar">
-        <a href="#objetivo">Objetivo</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#atividades">Atividades</a>
-        <a href="#formacao">Formação</a>
-        <a href="#habilidades">Habilidades</a>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">Wuzuy</span>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#experiencia">Trajetória</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
     </nav>
 
-    <button id="theme-toggle" aria-label="Alternar Tema">Modo Claro</button>
-
     <main class="container">
-        <header class="fade-in">
-            <h1>LUCAS SANDIN</h1>
-            <div class="contact-info">
-                Duque de Caxias - RJ &bull; lucaslimasandin@gmail.com<br>
-                <a href="https://github.com/wuzuy" target="_blank" rel="noopener noreferrer"
-                    style="white-space: nowrap;">github.com/wuzuy</a>
-            </div>
+        <header class="hero">
+            <h1>Lucas Matheus</h1>
+            <h2>Desenvolvedor Fullstack & Software Engineer</h2>
+            <p>Duque de Caxias, RJ | Criando soluções modernas e eficientes.</p>
         </header>
 
-        <section id="objetivo" class="fade-in">
-            <h2>Objetivo Profissional</h2>
-            <div class="item">
-                <p>Em busca de uma primeira oportunidade como Jovem Aprendiz ou Estagiário, onde eu possa aplicar minha
-                    proatividade e minhas habilidades em tecnologia para aprender, desenvolver soluções e agregar valor
-                    à empresa.</p>
+        <section id="sobre" class="fade-in">
+            <h3 class="section-title">Sobre Mim</h3>
+            <div class="card">
+                <p>Olá, eu sou o Lucas Matheus (mas pode me chamar de Matheus). Tenho 20 anos, moro em Duque de Caxias
+                    (RJ) e sou apaixonado por criar tecnologia que resolve problemas do mundo real. Atualmente estudo
+                    Engenharia de Software e Desenvolvimento de Sistemas, focando na criação de aplicações eficientes,
+                    com arquitetura limpa e que agreguem valor à vida das pessoas.</p>
             </div>
         </section>
 
-        <section id="experiencia" class="fade-in">
-            <h2>Experiência Profissional</h2>
-            <article class="item">
-                <header class="item-header">
-                    <span class="item-title">Desenvolvedor Mobile Freelancer</span>
-                    <time class="item-subtitle" datetime="2025-01/2025-05">Jan/2025 - Mai/2025</time>
-                </header>
-                <p>Desenvolvimento de app nativo em Kotlin/Jetpack Compose com integração de hardware via BLE e Wi-Fi
-                    para rastreamento em tempo real e segurança de dados em nuvem.</p>
-            </article>
-        </section>
-
-        <section id="atividades" class="fade-in">
-            <h2>Eventos e Atividades Extracurriculares</h2>
-            <article class="item">
-                <header class="item-header">
-                    <span class="item-title">HACK E ÉTICA: Grand Prix de Soluções Éticas</span>
-                    <time class="item-subtitle" datetime="2025">2025</time>
-                </header>
-                <p>Desenvolvimento backend, em equipe, do aplicativo 'TATO' (Tecnologia de Acesso Por Toque e Outros
-                    Sentidos).</p>
-            </article>
-            <article class="item">
-                <header class="item-header">
-                    <span class="item-title">3ª Semana Estadual do Técnico Industrial do CRT-RJ</span>
-                    <time class="item-subtitle" datetime="2025">2025</time>
-                </header>
-                <p>Apresentação do aplicativo "TATO" em feira de tecnologia, focando em acessibilidade e inclusão
-                    industrial.</p>
-            </article>
-        </section>
-
-        <section id="formacao" class="fade-in">
-            <h2>Formação Acadêmica</h2>
-            <article class="item">
-                <header class="item-header">
-                    <span class="item-title">Bacharelado em Engenharia de Software</span>
-                    <span class="item-subtitle">Estácio de Sá <time datetime="2025/2029">(2025-2029)</time></span>
-                </header>
-            </article>
-            <article class="item">
-                <header class="item-header">
-                    <span class="item-title">Técnico em Desenvolvimento de Sistemas</span>
-                    <span class="item-subtitle">Firjan SENAI <time datetime="2025/2026">(2025-2026)</time></span>
-                </header>
-            </article>
-        </section>
-
-        <section id="habilidades" class="fade-in">
-            <h2>Habilidades Técnicas</h2>
-            <div class="item">
-                <div class="tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">SQLite</span>
-                    <span class="tag">Windows</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Redes</span>
-                    <span class="tag">Hardware</span>
-                    <span class="tag">Power BI</span>
+        <section id="projetos" class="fade-in">
+            <h3 class="section-title">Projetos em Destaque</h3>
+            <div class="grid">
+                <div class="card project-card" onclick="openModal('sige')">
+                    <h4>SIGE</h4>
+                    <p>Plataforma digital para gestão de alunos.</p>
+                </div>
+                <div class="card project-card" onclick="openModal('gerenciador-vendas')">
+                    <h4>Gerenciador de Vendas</h4>
+                    <p>Sistema para gestão de produção e vendas.</p>
+                </div>
+                <div class="card project-card" onclick="openModal('tato')">
+                    <h4>App TATO</h4>
+                    <p>Tecnologia de Acesso Por Toque e Outros Sentidos.</p>
                 </div>
             </div>
         </section>
 
-        <section class="fade-in">
-            <h2>Cursos Complementares</h2>
-            <div class="item">
-                <ul>
-                    <li>Introdução a IoT</li>
-                    <li>Assistente de Suporte Técnico</li>
-                    <li>Excel Avançado</li>
-                </ul>
+        <section id="experiencia" class="fade-in">
+            <h3 class="section-title">Experiência</h3>
+            <div class="card">
+                <div class="item-header">
+                    <h4>Desenvolvedor Mobile Freelancer</h4>
+                    <span class="text-secondary">Jan/2025 - Mai/2025</span>
+                </div>
+                <p>Desenvolvimento de app nativo em Kotlin/Jetpack Compose com integração de hardware via BLE e Wi-Fi
+                    para rastreamento em tempo real e segurança de dados em nuvem.</p>
+            </div>
+        </section>
+
+        <section id="atividades" class="fade-in">
+            <h3 class="section-title">Atividades Extracurriculares</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>HACK E ÉTICA: Grand Prix (2025)</h4>
+                    <p>Desenvolvimento backend em equipe do app 'TATO' (Tecnologia de Acesso Por Toque e Outros
+                        Sentidos).</p>
+                </div>
+                <div class="card">
+                    <h4>3ª Semana Estadual do Técnico (2025)</h4>
+                    <p>Apresentação do app "TATO" em feira de tecnologia, com foco em acessibilidade industrial.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao" class="fade-in">
+            <h3 class="section-title">Formação Acadêmica</h3>
+            <div class="grid">
+                <div class="card project-card" onclick="openModal('faculdade')">
+                    <h4>Engenharia de Software (Bacharelado)</h4>
+                    <p class="text-secondary">Estácio de Sá | 2025 - 2029</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: var(--accent);">Ver grade curricular &rarr;</p>
+                </div>
+                <div class="card project-card" onclick="openModal('tecnico')">
+                    <h4>Desenvolvimento de Sistemas (Técnico)</h4>
+                    <p class="text-secondary">Firjan SENAI | 2025 - 2026</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: var(--accent);">Ver grade curricular &rarr;</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="fade-in">
+            <h3 class="section-title">Habilidades</h3>
+            <div class="card tags-container">
+                <span class="tag">Java</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">C#</span>
+                <span class="tag">Python</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">MySQL</span>
+            </div>
+        </section>
+
+        <section id="cursos" class="fade-in">
+            <h3 class="section-title">Cursos Complementares</h3>
+            <div class="card tags-container">
+                <span class="tag">Introdução a IoT</span>
+                <span class="tag">Assistente de Suporte Técnico</span>
+                <span class="tag">Excel Avançado</span>
+            </div>
+        </section>
+
+        <section id="contato" class="fade-in">
+            <h3 class="section-title">Contato</h3>
+            <div class="grid contact-grid">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lucaslimasandin@gmail.com" target="_blank"
+                    class="card btn-contact">Email</a>
+                <a href="http://github.com/wuzuy/" target="_blank" class="card btn-contact">GitHub</a>
+                <a href="https://www.linkedin.com/in/lucasmatheusls/" target="_blank"
+                    class="card btn-contact">LinkedIn</a>
+                <a href="https://www.instagram.com/lucas.mlswz/" target="_blank" class="card btn-contact">Instagram</a>
             </div>
         </section>
     </main>
+
+    <!-- Modal Base -->
+    <div id="project-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 id="modal-title">Título</h2>
+            <div id="modal-desc" style="margin-top: 10px;">Descrição do projeto...</div>
+            <div id="modal-tags" class="tags-container" style="margin: 15px 0;"></div>
+            <div class="modal-actions">
+                <a id="modal-link-github" href="#" target="_blank" class="btn">GitHub</a>
+                <a id="modal-link-page" href="#" class="btn btn-outline">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App TATO - Detalhes do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tato-mockup-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .mobile-device {
+            background: #121212;
+            border-radius: 30px;
+            border: 10px solid #2a2a2a;
+            height: 550px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .device-header {
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #333;
+            z-index: 10;
+        }
+
+        .device-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Modo Baixa Visão */
+        .header-baixa-visao {
+            background: #000;
+            color: #fff;
+        }
+
+        .bg-baixa-visao {
+            background: #000;
+        }
+
+        .btn-alto-contraste {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border: 4px solid #fff;
+            background: #000;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-alto-contraste:active {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-ac-alerta {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .btn-ac-alerta:active {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        /* Modo Surdez */
+        .header-surdez {
+            background: #1e293b;
+            color: #f8fafc;
+        }
+
+        .bg-surdez {
+            background: #0f172a;
+        }
+
+        .alerta-visual {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid #ef4444;
+            color: #fca5a5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+            animation: piscar 1s infinite alternate;
+        }
+
+        @keyframes piscar {
+            from {
+                box-shadow: 0 0 5px rgba(239, 68, 68, 0.2);
+            }
+
+            to {
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+            }
+        }
+
+        .transcricao-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 15px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .transcricao-texto {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .indicador-audio {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #3b82f6;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .dot-pulse {
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .btn-simular {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">Wuzuy</span>
+            <a href="index.html" class="btn btn-outline" style="padding: 5px 15px;">Voltar ao Portfólio</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero" style="padding-bottom: 10px;">
+            <h1 style="font-size: 2.5rem;">App TATO</h1>
+            <h2>Tecnologia de Acesso Por Toque e Outros Sentidos</h2>
+        </header>
+
+        <section class="card fade-in visible">
+            <h3 class="section-title">Sobre o Projeto</h3>
+            <p>Desenvolvido no HACK E ÉTICA: Grand Prix (2025), o TATO é uma solução focada na autonomia de operadores
+                industriais. O aplicativo adapta dinamicamente sua interface dependendo da necessidade do usuário,
+                oferecendo módulos dedicados para Baixa Visão e Surdez.</p>
+
+            <div class="tato-mockup-wrapper">
+
+                <div>
+                    <h4 style="text-align: center; margin-bottom: 10px; color: var(--text-primary);">Interface Baixa
+                        Visão</h4>
+                    <p
+                        style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+                        Foco em alto contraste, botões táteis ampliados e feedback auditivo via TalkBack.</p>
+
+                    <div class="mobile-device">
+                        <div class="device-header header-baixa-visao">MODO ACESSIBILIDADE ATIVO</div>
+                        <div class="device-content bg-baixa-visao">
+                            <button class="btn-alto-contraste"
+                                onclick="lerAviso('Assistente de voz ativado. O que deseja fazer?')">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                                </svg>
+                                Comandos de Voz
+                            </button>
+
+                            <button class="btn-alto-contraste" onclick="lerAviso('Navegação iniciada.')">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                                    <line x1="9" y1="3" x2="9" y2="18"></line>
+                                    <line x1="15" y1="6" x2="15" y2="21"></line>
+                                </svg>
+                                Rota Segura
+                            </button>
+
+                            <button class="btn-alto-contraste btn-ac-alerta"
+                                onclick="lerAviso('Alerta de emergência enviado.')">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                S O S
+                            </button>
+
+                            <div id="leitor-tela-status"
+                                style="color: #4ade80; text-align: center; margin-top: 10px; font-weight: bold; min-height: 20px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="text-align: center; margin-bottom: 10px; color: var(--text-primary);">Interface Surdez
+                    </h4>
+                    <p
+                        style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+                        Foco em alertas visuais extremos e transcrição de áudio do ambiente em tempo real.</p>
+
+                    <div class="mobile-device">
+                        <div class="device-header header-surdez">TRANSCRIÇÃO AMBIENTAL</div>
+                        <div class="device-content bg-surdez">
+
+                            <div id="alerta-surdo" class="alerta-visual">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="margin: 0 auto 5px auto;">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                ALARME DE MÁQUINA DETECTADO
+                            </div>
+
+                            <div class="transcricao-box">
+                                <div id="texto-transcrito" class="transcricao-texto">
+                                    <span style="color: #64748b;">Aguardando áudio do supervisor...</span>
+                                </div>
+                                <div class="indicador-audio">
+                                    <div class="dot-pulse"></div>
+                                    Ouvindo ambiente
+                                </div>
+                            </div>
+
+                            <button class="btn-simular" onclick="simularAmbienteFabrica()">Simular Interação do
+                                Supervisor</button>
+                            <button class="btn-simular"
+                                style="background: transparent; border: 1px solid #ef4444; color: #ef4444;"
+                                onclick="dispararAlarme()">Simular Alarme Sonoro</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="section-title" style="margin-top: 50px;">Tecnologias Utilizadas</h3>
+            <div style="margin-bottom: 30px;">
+                <div class="tags-container" style="margin-bottom: 15px;">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">Kotlin (Integração Smartwatch)</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Google Gemini API (NLP e Transcrição)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simula o feedback do leitor de tela (TalkBack)
+        function lerAviso(texto) {
+            const status = document.getElementById('leitor-tela-status');
+            status.textContent = `🔊 "${texto}"`;
+            setTimeout(() => { status.textContent = ''; }, 3000);
+        }
+
+        // Simula a conversao de fala para texto (Speech-to-Text)
+        function simularAmbienteFabrica() {
+            const caixaTexto = document.getElementById('texto-transcrito');
+            caixaTexto.innerHTML = '<span style="color: #3b82f6;">Processando fala...</span>';
+
+            setTimeout(() => {
+                caixaTexto.innerHTML = `
+                    <strong style="color: #fff;">Supervisor:</strong><br>
+                    "Atenção equipe, a linha de montagem 2 será paralisada em 5 minutos para manutenção preventiva. Por favor, finalizem o lote atual."
+                `;
+            }, 1500);
+        }
+
+        // Simula a deteccao de um som alto/alarme e conversao para alerta visual
+        function dispararAlarme() {
+            const alerta = document.getElementById('alerta-surdo');
+            alerta.style.display = 'block';
+
+            setTimeout(() => {
+                alerta.style.display = 'none';
+            }, 4000);
+        }
+    </script>
+</body>
+
+</html>

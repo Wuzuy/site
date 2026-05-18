@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGE - Detalhes do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos base dos mockups */
+        .mockup-section {
+            margin-bottom: 50px;
+        }
+
+        .mockup-title {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .mockup-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .sige-mockup {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 40px 20px;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Estilos do Portal de Inscrição (Interativo) */
+        .sige-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sige-header h3 {
+            color: #004a8f;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .sige-header h3 span {
+            color: #00aaff;
+            font-weight: 300;
+        }
+
+        .sige-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .sige-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sige-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .sige-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sige-tabs {
+            display: flex;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .sige-tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            color: #888;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .sige-tab.active {
+            color: #004a8f;
+            border-bottom: 2px solid #004a8f;
+            margin-bottom: -2px;
+        }
+
+        .sige-form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .sige-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .sige-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .sige-input:focus {
+            border-color: #004a8f;
+        }
+
+        .sige-btn {
+            width: 100%;
+            padding: 12px;
+            background: #004a8f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .sige-btn:hover {
+            background: #00366b;
+        }
+
+        .sige-error {
+            color: #d97706;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+            background: #fef3c7;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #fde68a;
+        }
+
+        .edital-item {
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: 0.2s;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .edital-item:hover {
+            border-color: #004a8f;
+            box-shadow: 0 2px 8px rgba(0, 74, 143, 0.1);
+        }
+
+        .edital-item h4 {
+            color: #333;
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+
+        .edital-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        /* Estilos do Portal do Aluno (Mockups Visuais) */
+        .portal-mockup {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        .portal-header {
+            background: #004a8f;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .portal-header-logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .portal-header-user {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .portal-sidebar {
+            background: #f8fafc;
+            width: 200px;
+            padding: 20px 0;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .portal-sidebar-link {
+            display: block;
+            padding: 10px 20px;
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-left: 3px solid transparent;
+        }
+
+        .portal-sidebar-link:hover,
+        .portal-sidebar-link.active {
+            background: #e2e8f0;
+            border-left-color: #004a8f;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .portal-body {
+            display: flex;
+            min-height: 400px;
+        }
+
+        .portal-content {
+            flex: 1;
+            padding: 30px;
+            background: #fff;
+        }
+
+        /* Componentes do Portal */
+        .welcome-box {
+            background: linear-gradient(135deg, #004a8f 0%, #00aaff 100%);
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info-card-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .info-card-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* Tabela de Grade */
+        .grade-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .grade-table th {
+            background: #f8fafc;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #e2e8f0;
+            color: #475569;
+        }
+
+        .grade-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Calendario */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .calendar-day-header {
+            font-weight: 600;
+            color: #64748b;
+            font-size: 0.8rem;
+            padding: 5px;
+        }
+
+        .calendar-day {
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .calendar-day.active {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+
+        .calendar-day.has-event {
+            border-bottom: 3px solid #004a8f;
+        }
+
+        .event-tag {
+            font-size: 0.65rem;
+            background: #004a8f;
+            color: #fff;
+            border-radius: 4px;
+            padding: 2px 4px;
+            margin-top: 4px;
+        }
+
+
+        @media (max-width: 768px) {
+            .sige-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portal-body {
+                flex-direction: column;
+            }
+
+            .portal-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                display: flex;
+                overflow-x: auto;
+            }
+
+            .portal-sidebar-link {
+                border-left: none;
+                border-bottom: 3px solid transparent;
+                white-space: nowrap;
+            }
+
+            .portal-sidebar-link:hover,
+            .portal-sidebar-link.active {
+                border-left-color: transparent;
+                border-bottom-color: #004a8f;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">Wuzuy</span>
+            <a href="index.html" class="btn btn-outline" style="padding: 5px 15px;">Voltar ao Portfólio</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero" style="padding-bottom: 10px;">
+            <h1 style="font-size: 2.5rem;">SIGE</h1>
+            <h2>Sistema de Inscrição e Gerenciamento Escolar</h2>
+        </header>
+
+        <section class="card fade-in visible">
+            <h3 class="section-title">Sobre o Projeto</h3>
+            <p style="margin-bottom: 30px;">O SIGE é uma plataforma web completa desenvolvida para automatizar e
+                modernizar a gestão de instituições de ensino. O projeto é dividido em módulos de acesso para visitantes
+                (inscrição) e alunos matriculados.</p>
+
+            <!-- Mockup 1: Inscrição -->
+            <div class="mockup-section">
+                <h4 class="mockup-title">Portal de Inscrição e Editais</h4>
+                <p class="mockup-desc">Página inicial pública para cadastro em novos cursos e visualização de editais
+                    abertos. Teste a validação do formulário abaixo.</p>
+
+                <div class="sige-mockup">
+                    <div class="sige-header">
+                        <h3>Firjan <span>SENAI</span></h3>
+                        <p>Sistema de Inscrição de Cursos</p>
+                    </div>
+
+                    <div class="sige-grid">
+                        <div class="sige-card">
+                            <div class="sige-card-title" style="margin-bottom: 5px;">Acesso ao Sistema</div>
+                            <p style="font-size: 0.85rem; color: #666; margin-bottom: 20px;">Faça login ou cadastre-se
+                                para se inscrever nos cursos</p>
+
+                            <div class="sige-tabs">
+                                <div class="sige-tab active" onclick="switchTab('login')" id="tab-login">Login</div>
+                                <div class="sige-tab" onclick="switchTab('cadastro')" id="tab-cadastro">Cadastro</div>
+                            </div>
+
+                            <form id="sigeForm" onsubmit="handleMockupSubmit(event)">
+                                <div class="sige-form-group" id="field-nome" style="display: none;">
+                                    <label>Nome Completo</label>
+                                    <input type="text" class="sige-input" placeholder="Lucas Sandin">
+                                </div>
+
+                                <div class="sige-form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="sige-input" id="email-input"
+                                        placeholder="lucas@exemplo.com">
+                                    <div class="sige-error" id="email-error"></div>
+                                </div>
+
+                                <div class="sige-form-group">
+                                    <label>Senha</label>
+                                    <input type="password" class="sige-input" id="senha-input" placeholder="••••••••">
+                                    <div class="sige-error" id="senha-error"></div>
+                                </div>
+
+                                <button type="submit" class="sige-btn" id="btn-submit">Entrar</button>
+                            </form>
+                        </div>
+
+                        <div>
+                            <div class="sige-card-title"
+                                style="color: #d97706; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                                Editais Abertos
+                            </div>
+
+                            <div class="edital-item">
+                                <h4>Técnico em Desenvolvimento de Sistemas</h4>
+                                <p>Inscrições até 20/06/2026</p>
+                            </div>
+                            <div class="edital-item">
+                                <h4>Especialização em Nuvem</h4>
+                                <p>Processo Seletivo Interno</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockup 2: Portal do Aluno (Home) -->
+            <div class="mockup-section">
+                <h4 class="mockup-title">Portal do Aluno - Visão Geral</h4>
+                <p class="mockup-desc">Dashboard principal do aluno matriculado, exibindo informações de identificação e
+                    atalhos rápidos.</p>
+
+                <div class="portal-mockup">
+                    <div class="portal-header">
+                        <div class="portal-header-logo">SIGE <span style="font-weight: 300; font-size: 0.9rem;">Portal
+                                do Aluno</span></div>
+                        <div class="portal-header-user">
+                            <span>Lucas Sandin</span>
+                            <div
+                                style="width: 30px; height: 30px; background: #fff; color: #004a8f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                LS</div>
+                        </div>
+                    </div>
+                    <div class="portal-body">
+                        <div class="portal-sidebar">
+                            <a href="#" class="portal-sidebar-link active">Início</a>
+                            <a href="#" class="portal-sidebar-link">Grade Curricular</a>
+                            <a href="#" class="portal-sidebar-link">Agenda Escolar</a>
+                            <a href="#" class="portal-sidebar-link">Histórico e Notas</a>
+                        </div>
+                        <div class="portal-content">
+                            <div class="welcome-box">
+                                <h3 style="margin: 0 0 5px 0; font-size: 1.5rem;">Olá, Lucas!</h3>
+                                <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Bem-vindo ao semestre letivo
+                                    2026.1</p>
+                            </div>
+
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <div class="info-card-label">Matrícula</div>
+                                    <div class="info-card-value">202610145</div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-label">Curso</div>
+                                    <div class="info-card-value">Desenv. de Sistemas</div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-card-label">Status</div>
+                                    <div class="info-card-value" style="color: #10b981;">Ativo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockup 3: Grade Curricular -->
+            <div class="mockup-section">
+                <h4 class="mockup-title">Grade Curricular</h4>
+                <p class="mockup-desc">Visualização estruturada das disciplinas cursadas e em andamento.</p>
+
+                <div class="portal-mockup">
+                    <div class="portal-header" style="background: #334155;">
+                        <div class="portal-header-logo">SIGE <span style="font-weight: 300; font-size: 0.9rem;">Portal
+                                do Aluno</span></div>
+                    </div>
+                    <div class="portal-body">
+                        <div class="portal-content" style="padding: 20px;">
+                            <h3 style="margin: 0 0 15px 0; color: #0f172a;">Minha Estrutura Curricular</h3>
+                            <div
+                                style="background: #f8fafc; padding: 10px 15px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: 600; color: #475569;">
+                                Semestre Atual: Módulo Específico III
+                            </div>
+
+                            <div style="overflow-x: auto;">
+                                <table class="grade-table">
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Disciplina</th>
+                                        <th>C.H.</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                        <td>DGT0244</td>
+                                        <td>Programação Orientada a Objetos em Java</td>
+                                        <td>80h</td>
+                                        <td><span style="color: #10b981; font-weight: 600;">Aprovado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DGT1335</td>
+                                        <td>Estrutura de Dados</td>
+                                        <td>80h</td>
+                                        <td><span style="color: #10b981; font-weight: 600;">Aprovado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DGT2301</td>
+                                        <td>Desenvolvimento Web Full MVC</td>
+                                        <td>80h</td>
+                                        <td><span style="color: #3b82f6; font-weight: 600;">Cursando</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DGT0303</td>
+                                        <td>Programação para Dispositivos Móveis</td>
+                                        <td>80h</td>
+                                        <td><span style="color: #64748b;">Pendente</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockup 4: Agenda / Calendário -->
+            <div class="mockup-section">
+                <h4 class="mockup-title">Agenda Escolar</h4>
+                <p class="mockup-desc">Calendário interativo para acompanhamento de aulas, provas e feriados.</p>
+
+                <div class="portal-mockup">
+                    <div class="portal-header" style="background: #334155;">
+                        <div class="portal-header-logo">SIGE <span style="font-weight: 300; font-size: 0.9rem;">Portal
+                                do Aluno</span></div>
+                    </div>
+                    <div class="portal-body">
+                        <div class="portal-content" style="padding: 20px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                <h3 style="margin: 0; color: #0f172a;">Calendário Letivo</h3>
+                                <div style="font-weight: bold; color: #004a8f;">Maio 2026</div>
+                            </div>
+
+                            <div class="calendar-grid">
+                                <div class="calendar-day-header">Dom</div>
+                                <div class="calendar-day-header">Seg</div>
+                                <div class="calendar-day-header">Ter</div>
+                                <div class="calendar-day-header">Qua</div>
+                                <div class="calendar-day-header">Qui</div>
+                                <div class="calendar-day-header">Sex</div>
+                                <div class="calendar-day-header">Sáb</div>
+
+                                <div class="calendar-day" style="color: #ccc;">26</div>
+                                <div class="calendar-day" style="color: #ccc;">27</div>
+                                <div class="calendar-day" style="color: #ccc;">28</div>
+                                <div class="calendar-day" style="color: #ccc;">29</div>
+                                <div class="calendar-day" style="color: #ccc;">30</div>
+                                <div class="calendar-day" style="color: #ef4444;">1<div class="event-tag"
+                                        style="background: #ef4444;">Feriado</div>
+                                </div>
+                                <div class="calendar-day">2</div>
+
+                                <div class="calendar-day">3</div>
+                                <div class="calendar-day">4</div>
+                                <div class="calendar-day has-event">5<div class="event-tag">Aula Prat.</div>
+                                </div>
+                                <div class="calendar-day">6</div>
+                                <div class="calendar-day">7</div>
+                                <div class="calendar-day">8</div>
+                                <div class="calendar-day">9</div>
+
+                                <div class="calendar-day">10</div>
+                                <div class="calendar-day">11</div>
+                                <div class="calendar-day">12</div>
+                                <div class="calendar-day">13</div>
+                                <div class="calendar-day">14</div>
+                                <div class="calendar-day has-event active">15<div class="event-tag">Avaliação</div>
+                                </div>
+                                <div class="calendar-day">16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title" style="margin-top: 40px;">Tecnologias Utilizadas</h3>
+            <div style="margin-bottom: 30px;">
+                <div class="tags-container" style="margin-bottom: 15px;">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript (Vanilla)</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">API REST</span>
+                    <span class="tag">Postman</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Lógica do Mockup de Inscrição
+        function switchTab(tab) {
+            document.getElementById('tab-login').classList.remove('active');
+            document.getElementById('tab-cadastro').classList.remove('active');
+            document.getElementById('tab-' + tab).classList.add('active');
+
+            if (tab === 'cadastro') {
+                document.getElementById('field-nome').style.display = 'block';
+                document.getElementById('btn-submit').textContent = 'Cadastrar';
+            } else {
+                document.getElementById('field-nome').style.display = 'none';
+                document.getElementById('btn-submit').textContent = 'Entrar';
+            }
+
+            document.getElementById('email-error').style.display = 'none';
+            document.getElementById('senha-error').style.display = 'none';
+        }
+
+        function handleMockupSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            const senha = document.getElementById('senha-input').value;
+            const emailError = document.getElementById('email-error');
+            const senhaError = document.getElementById('senha-error');
+
+            let hasError = false;
+
+            if (!email.includes('@')) {
+                emailError.textContent = `! Inclua um "@" no endereço de email. "${email}" não contém um "@".`;
+                emailError.style.display = 'block';
+                hasError = true;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            if (senha.trim() === '') {
+                senhaError.textContent = '! Preencha este campo.';
+                senhaError.style.display = 'block';
+                hasError = true;
+            } else {
+                senhaError.style.display = 'none';
+            }
+
+            if (!hasError) {
+                alert('Ação realizada com sucesso no mockup!');
+            }
+        }
+    </script>
+</body>
+
+</html>s
