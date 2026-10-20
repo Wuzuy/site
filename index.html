@@ -4,188 +4,744 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Sandin - Portfólio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Lucas Sandin — Desenvolvedor em Formação</title>
+    <meta name="description"
+        content="Portfólio de Lucas Sandin, desenvolvedor em formação em Engenharia de Software. Projetos de desenvolvimento web, mobile e dados.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-effects" aria-hidden="true">
+        <span class="bg-glow bg-glow-1"></span>
+        <span class="bg-glow bg-glow-2"></span>
+        <span class="bg-grid"></span>
+    </div>
+
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <span class="logo">Wuzuy</span>
+            <a href="#top" class="brand">
+                <span class="brand-mark">LS</span>
+                <span class="brand-text">Lucas Sandin</span>
+            </a>
+
             <ul class="nav-links" id="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#experiencia">Trajetória</a></li>
+                <li><a href="#formacao">Formação</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+
+            <div class="nav-actions">
+                <a href="assets/curriculo-lucas-sandin.pdf" class="btn btn-ghost btn-sm" download>Currículo</a>
+                <a href="#contato" class="btn btn-primary btn-sm">Fale comigo</a>
+            </div>
+
+            <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <main class="container">
-        <header class="hero">
-            <h1>Lucas Sandin</h1>
-            <h2>Estagiário em Tecnologia da Informação</h2>
-            <p>Duque de Caxias, RJ | Criando soluções modernas e eficientes.</p>
-        </header>
+    <main id="top">
+        <section class="home-hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">
+                        <span class="pulse-dot"></span> Disponível para estágio em TI
+                    </span>
 
-        <section id="sobre" class="fade-in">
-            <h3 class="section-title">Sobre Mim</h3>
-            <div class="card">
-                <p>Olá, eu sou o Lucas Sandin. Tenho 21 anos, moro em Duque de Caxias (RJ) e sou apaixonado por criar
-                    tecnologia que resolve problemas do mundo real. Atualmente curso Bacharelado em Engenharia de
-                    Software na Estácio e sou Técnico em Desenvolvimento de Sistemas pelo Firjan SENAI, com interesse em
-                    Sistemas de Informação, Infraestrutura e Telecomunicação e Atendimento e Suporte. Gosto de atuar
-                    criando aplicações eficientes, com arquitetura limpa e que agreguem valor à vida das pessoas.</p>
+                    <h1>Lucas <span class="text-gradient">Sandin</span></h1>
+
+                    <p class="hero-role">Desenvolvedor em formação · Engenharia de Software</p>
+
+                    <p class="hero-lead">
+                        Transformo problemas reais em soluções digitais — do front-end ao banco de dados.
+                        Estudante de Engenharia de Software com formação técnica pelo SENAI e projetos
+                        publicados em produção.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projetos" class="btn btn-primary btn-lg">
+                            Ver projetos
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </a>
+                        <a href="assets/curriculo-lucas-sandin.pdf" class="btn btn-outline btn-lg" download>
+                            Baixar currículo
+                        </a>
+                    </div>
+
+                    <ul class="hero-meta">
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Duque de Caxias, RJ
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+                                <path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5" />
+                            </svg>
+                            Estácio · 3º período
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 12 2 2 4-4" />
+                                <circle cx="12" cy="12" r="9" />
+                            </svg>
+                            Inglês intermediário
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="portrait">
+                        <div class="portrait-frame">
+                            <img src="assets/profile.jpg" alt="Fotografia de Lucas Sandin" loading="eager">
+                        </div>
+                        <span class="photo-tag"><span class="dot"></span> Jovem Aprendiz · Placar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="stats" id="stats">
+                    <div class="stat">
+                        <strong data-counter="4" data-suffix="+">0</strong>
+                        <span>Projetos entregues</span>
+                    </div>
+                    <div class="stat">
+                        <strong data-counter="10">0</strong>
+                        <span>Certificações</span>
+                    </div>
+                    <div class="stat">
+                        <strong data-counter="3" data-suffix="º">0</strong>
+                        <span>Lugar no CRT-RJ</span>
+                    </div>
+                    <div class="stat">
+                        <strong data-counter="2">0</strong>
+                        <span>Formações acadêmicas</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="projetos" class="fade-in">
-            <h3 class="section-title">Projetos em Destaque</h3>
-            <div class="grid">
-                <div class="card project-card" onclick="openModal('sige')">
-                    <h4>SIGE</h4>
-                    <p>Plataforma digital para gestão de alunos.</p>
+        <section id="sobre" class="section reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">01 — Sobre</span>
+                    <h2>Quem está por trás do código</h2>
                 </div>
-                <div class="card project-card" onclick="openModal('tato')">
-                    <h4>TATO</h4>
-                    <p>Tecnologia de Acesso Por Toque e Outros Sentidos.</p>
-                </div>
-                <div class="card project-card" onclick="openModal('gerenciador-vendas')">
-                    <h4>Gerenciador de Vendas</h4>
-                    <p>Sistema para gestão de produção e vendas.</p>
+
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p>
+                            Tenho 21 anos, moro em Duque de Caxias (RJ) e sou apaixonado por criar tecnologia
+                            que resolve problemas do mundo real. Curso <strong>Engenharia de Software</strong>
+                            na Estácio e sou <strong>Técnico em Desenvolvimento de Sistemas</strong> pelo
+                            Firjan SENAI.
+                        </p>
+                        <p>
+                            Atuo hoje como <strong>Jovem Aprendiz na Placar</strong>, onde desenvolvo disciplina
+                            de rotina, organização de documentos e controle de planilhas. Em paralelo, construo
+                            aplicações com foco em <strong>arquitetura limpa</strong>, experiência do usuário e
+                            resultados mensuráveis.
+                        </p>
+                        <p>
+                            Meu interesse é evoluir em <strong>desenvolvimento, dados e infraestrutura</strong>,
+                            sempre unindo base técnica a uma visão prática de negócio.
+                        </p>
+
+                        <div class="about-tags">
+                            <span class="chip">Desenvolvimento web</span>
+                            <span class="chip">Aplicativos mobile</span>
+                            <span class="chip">Banco de dados</span>
+                            <span class="chip">Suporte e infraestrutura</span>
+                        </div>
+                    </div>
+
+                    <aside class="about-card">
+                        <h3>Em resumo</h3>
+                        <ul class="facts">
+                            <li>
+                                <span>Localização</span>
+                                <strong>Duque de Caxias, RJ</strong>
+                            </li>
+                            <li>
+                                <span>Formação atual</span>
+                                <strong>Eng. de Software · Estácio</strong>
+                            </li>
+                            <li>
+                                <span>Formação técnica</span>
+                                <strong>Desenvolvimento de Sistemas · SENAI</strong>
+                            </li>
+                            <li>
+                                <span>Atuação</span>
+                                <strong>Jovem Aprendiz · Placar</strong>
+                            </li>
+                            <li>
+                                <span>Idiomas</span>
+                                <strong>Português nativo · Inglês intermediário</strong>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="btn btn-primary btn-block">Vamos conversar</a>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <section id="experiencia" class="fade-in">
-            <h3 class="section-title">Experiência</h3>
-            <div class="card">
-                <div class="item-header">
-                    <h4>Desenvolvedor Mobile Freelancer (SAFEA)</h4>
-                    <span class="text-secondary">Jan/2025 - Mai/2025</span>
+        <section id="experiencia" class="section section-alt reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">02 — Trajetória</span>
+                    <h2>Experiência profissional</h2>
+                    <p class="section-sub">Da rotina administrativa ao desenvolvimento de aplicativos.</p>
                 </div>
-                <p>Desenvolvimento de app nativo em Kotlin/Jetpack Compose com integração de hardware via BLE
-                    para rastreamento em tempo real, segurança de dados e gravação de áudio em nuvem.</p>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-body">
+                            <div class="timeline-top">
+                                <div>
+                                    <h3>Jovem Aprendiz — Arco Administrativo</h3>
+                                    <p class="timeline-company">Placar Comércio Atacadista de Bebidas</p>
+                                </div>
+                                <span class="badge">set/2026 — atual</span>
+                            </div>
+                            <ul class="bullets">
+                                <li>Organização e controle de documentos administrativos.</li>
+                                <li>Atualização e organização de planilhas para acompanhamento de rotinas
+                                    relacionadas a CT-e.</li>
+                            </ul>
+                            <div class="tags-container">
+                                <span class="tag">Organização</span>
+                                <span class="tag">Excel</span>
+                                <span class="tag">Rotinas administrativas</span>
+                                <span class="tag">CT-e</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-body">
+                            <div class="timeline-top">
+                                <div>
+                                    <h3>Desenvolvedor Mobile Freelancer</h3>
+                                    <p class="timeline-company">SAFEA</p>
+                                </div>
+                                <span class="badge">jan/2025 — mai/2025</span>
+                            </div>
+                            <ul class="bullets">
+                                <li>Aplicativo nativo em Kotlin / Jetpack Compose.</li>
+                                <li>Integração de hardware via BLE para rastreamento em tempo real.</li>
+                                <li>Segurança de dados e gravação de áudio em nuvem.</li>
+                            </ul>
+                            <div class="tags-container">
+                                <span class="tag">Kotlin</span>
+                                <span class="tag">Jetpack Compose</span>
+                                <span class="tag">BLE</span>
+                                <span class="tag">Cloud</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section id="atividades" class="fade-in">
-            <h3 class="section-title">Atividades Extracurriculares</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>Grand Prix SENAI de Inovação (2026)</h4>
-                    <p>Desenvolvimento do ByteCode, protótipo de controle de acesso industrial em realidade virtual
-                        (Unity) com visão computacional.</p>
+        <section id="projetos" class="section reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">03 — Portfólio</span>
+                    <h2>Projetos em destaque</h2>
+                    <p class="section-sub">Soluções construídas do zero, com foco em utilidade real.</p>
                 </div>
-                <div class="card">
-                    <h4>HACK E ÉTICA: Grand Prix (2025)</h4>
-                    <p>Desenvolvimento do app 'TATO' (Tecnologia de Acesso Por Toque e Outros Sentidos) em Flutter com IA.</p>
-                </div>
-                <div class="card">
-                    <h4>3ª Semana Estadual do Técnico (2025)</h4>
-                    <p>Apresentação do app "TATO" em feira de tecnologia do CRT-RJ. 3º lugar entre 28 equipes.</p>
-                </div>
-                <div class="card">
-                    <h4>Projeto Integrador - SIGE (2026)</h4>
-                    <p>Plataforma web/mobile de gestão educacional publicada em produção.</p>
+
+                <div class="projects-grid stagger">
+                    <article class="project-card" onclick="openModal('sige')" tabindex="0" role="button"
+                        aria-label="Ver detalhes do projeto SIGE">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5" />
+                                <path d="M8 8h8M8 12h8M8 16h5" />
+                                <path d="M2 19.5h20" />
+                            </svg>
+                        </div>
+                        <h3>SIGE</h3>
+                        <p>Matrículas e dados de alunos viviam em planilhas e processos manuais. Desenvolvi uma
+                            plataforma web com inscrição online, editais e painel do aluno — publicada em produção.</p>
+                        <div class="tags-container">
+                            <span class="tag">Web</span>
+                            <span class="tag">Backend</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <span class="project-link">
+                            Ver detalhes
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </span>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('gerenciador-vendas')" tabindex="0" role="button"
+                        aria-label="Ver detalhes do projeto Gerenciador de Vendas">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18" />
+                                <path d="m7 14 4-4 3 3 5-6" />
+                            </svg>
+                        </div>
+                        <h3>Gerenciador de Vendas</h3>
+                        <p>Pequenos negócios controlavam produção e vendas sem sistema. Construí uma API REST em Node.js
+                            e TypeScript, com arquitetura MVC, para centralizar pedidos, estoque e vendas.</p>
+                        <div class="tags-container">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <span class="project-link">
+                            Ver detalhes
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </span>
+                    </article>
+
+                    <article class="project-card project-static">
+                        <span class="project-flag">Grand Prix SENAI · 2026</span>
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z" />
+                            </svg>
+                        </div>
+                        <h3>ByteCode</h3>
+                        <p>O acesso a áreas industriais ainda depende de contato físico. Criei um protótipo em
+                            realidade virtual com visão computacional para liberar o acesso sem toque, apresentado no
+                            Grand Prix SENAI 2026.</p>
+                        <div class="tags-container">
+                            <span class="tag">Unity</span>
+                            <span class="tag">Visão computacional</span>
+                            <span class="tag">VR</span>
+                        </div>
+                        <span class="project-link project-link-muted">Projeto acadêmico</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="formacao" class="fade-in">
-            <h3 class="section-title">Formação Acadêmica</h3>
-            <div class="grid">
-                <div class="card project-card" onclick="openModal('faculdade')">
-                    <h4>Engenharia de Software (Bacharelado)</h4>
-                    <p class="text-secondary">Estácio de Sá | Jul 2025 - Jul 2029</p>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: var(--accent);">Ver grade curricular &rarr;</p>
+        <section id="formacao" class="section section-alt reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">04 — Formação e conquistas</span>
+                    <h2>Formação</h2>
                 </div>
-                <div class="card project-card" onclick="openModal('tecnico')">
-                    <h4>Desenvolvimento de Sistemas (Técnico)</h4>
-                    <p class="text-secondary">Firjan SENAI | Jan 2025 - Jul 2026</p>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: var(--accent);">Ver grade curricular &rarr;</p>
+
+                <div class="education-grid stagger">
+                    <article class="edu-card" onclick="openModal('faculdade')" tabindex="0" role="button"
+                        aria-label="Ver grade curricular de Engenharia de Software">
+                        <div class="edu-head">
+                            <span class="edu-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+                                    <path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5" />
+                                </svg>
+                            </span>
+                            <span class="badge badge-soft">Em andamento</span>
+                        </div>
+                        <h3>Engenharia de Software</h3>
+                        <p class="edu-school">Centro Universitário Estácio de Sá</p>
+                        <p class="edu-period">jul/2025 — jul/2029</p>
+                        <span class="project-link">Ver grade curricular
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </span>
+                    </article>
+
+                    <article class="edu-card" onclick="openModal('tecnico')" tabindex="0" role="button"
+                        aria-label="Ver grade curricular do curso técnico">
+                        <div class="edu-head">
+                            <span class="edu-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5" />
+                                    <path d="M8 8h8M8 12h8M8 16h5" />
+                                    <path d="M2 19.5h20" />
+                                </svg>
+                            </span>
+                            <span class="badge badge-soft">Concluído</span>
+                        </div>
+                        <h3>Desenvolvimento de Sistemas</h3>
+                        <p class="edu-school">Firjan SENAI</p>
+                        <p class="edu-period">jan/2025 — jul/2026</p>
+                        <span class="project-link">Ver grade curricular
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </span>
+                    </article>
+                </div>
+
+                <div class="achievements">
+                    <div class="achievement">
+                        <span class="achievement-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="9" r="6" />
+                                <path d="M8.5 14 7 22l5-3 5 3-1.5-8" />
+                            </svg>
+                        </span>
+                        <div class="achievement-body">
+                            <span class="achievement-rank">3º lugar</span>
+                            <h3>Feira de Ciências Industriais Internacional — SENAI 2025</h3>
+                            <p>App TATO, em Flutter com IA, entre as 3 melhores soluções de 28 equipes. Premiação do
+                                CRT-RJ.</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement achievement--accent">
+                        <span class="achievement-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9L12 3Z" />
+                            </svg>
+                        </span>
+                        <div class="achievement-body">
+                            <span class="achievement-rank">Aluno destaque</span>
+                            <h3>Aluno Destaque 2025 — Firjan SENAI Caxias</h3>
+                            <p>Reconhecimento pelo desempenho e dedicação no curso Técnico em Desenvolvimento de
+                                Sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery" aria-label="Fotos das conquistas">
+                    <figure class="gallery-item gallery-item--tall">
+                        <a href="assets/conquista-tato-1.jpg" data-lightbox
+                            aria-label="Ampliar foto de Lucas Sandin com o certificado de 3º lugar">
+                            <img src="assets/conquista-tato-1.jpg" width="900" height="1200" loading="lazy"
+                                alt="Lucas Sandin segurando o certificado de 3º lugar na Feira de Ciências Industriais do SENAI 2025">
+                            <span class="gallery-caption">Certificado do 3º lugar · SENAI 2025</span>
+                        </a>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <a href="assets/conquista-tato-2.jpg" data-lightbox
+                            aria-label="Ampliar foto do certificado de 3º lugar">
+                            <img src="assets/conquista-tato-2.jpg" width="1000" height="563" loading="lazy"
+                                alt="Certificado de 3º lugar da Feira de Ciências Industriais Internacional do SENAI 2025">
+                            <span class="gallery-caption">Certificado de 3º lugar · CRT-RJ</span>
+                        </a>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <a href="assets/conquista-tato-3.jpg" data-lightbox
+                            aria-label="Ampliar foto da equipe do TATO na premiação">
+                            <img src="assets/conquista-tato-3.jpg" width="1000" height="563" loading="lazy"
+                                alt="Equipe do TATO reunida na premiação da Feira de Ciências Industriais do SENAI 2025">
+                            <span class="gallery-caption">Equipe do TATO na premiação</span>
+                        </a>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <a href="assets/conquista-destaque-1.jpg" data-lightbox
+                            aria-label="Ampliar foto dos alunos destaque de 2025">
+                            <img src="assets/conquista-destaque-1.jpg" width="1000" height="563" loading="lazy"
+                                alt="Grupo de alunos destaque de 2025 com as placas da Firjan SENAI Caxias">
+                            <span class="gallery-caption">Alunos Destaque 2025 · Firjan SENAI Caxias</span>
+                        </a>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <a href="assets/conquista-destaque-2.jpg" data-lightbox
+                            aria-label="Ampliar foto dos troféus de Aluno Destaque 2025">
+                            <img src="assets/conquista-destaque-2.jpg" width="855" height="641" loading="lazy"
+                                alt="Troféus de Aluno Destaque 2025 da Firjan SENAI Caxias">
+                            <span class="gallery-caption">Troféus de Aluno Destaque 2025</span>
+                        </a>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <section id="habilidades" class="fade-in">
-            <h3 class="section-title">Habilidades</h3>
-            <div class="card tags-container">
-                <span class="tag">Java</span>
-                <span class="tag">Python</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML/CSS</span>
-                <span class="tag">C#/.NET</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">React</span>
-                <span class="tag">Supabase</span>
-                <span class="tag">Git</span>
-                <span class="tag">Postman</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">SQLite</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">SQL Server</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Firebase</span>
-                <span class="tag">Windows</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Microsoft 365</span>
-                <span class="tag">Google Workspace</span>
+        <section id="habilidades" class="section reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">05 — Ferramentas</span>
+                    <h2>Habilidades técnicas</h2>
+                </div>
+
+                <div class="skills-grid stagger">
+                    <div class="skill-card">
+                        <h3>Linguagens</h3>
+                        <div class="tags-container">
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">C#/.NET</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Front-end & Mobile</h3>
+                        <div class="tags-container">
+                            <span class="tag">React</span>
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Jetpack Compose</span>
+                            <span class="tag">Flutter</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Back-end</h3>
+                        <div class="tags-container">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">APIs REST</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Dados</h3>
+                        <div class="tags-container">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Ferramentas</h3>
+                        <div class="tags-container">
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Microsoft 365</span>
+                            <span class="tag">Google Workspace</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Sistemas</h3>
+                        <div class="tags-container">
+                            <span class="tag">Windows</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Redes</span>
+                            <span class="tag">Segurança da Informação</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="cursos" class="fade-in">
-            <h3 class="section-title">Cursos Complementares</h3>
-            <div class="card tags-container">
-                <span class="tag">RAG - ChromaDB, LlamaIndex e Python</span>
-                <span class="tag">Basics of JavaScript</span>
-                <span class="tag">Java do Zero ao Profissional</span>
-                <span class="tag">Java POO</span>
-                <span class="tag">Java Básico</span>
-                <span class="tag">Git e GitHub</span>
-                <span class="tag">Cisco Packet Tracer</span>
-                <span class="tag">Auxiliar de Suporte Técnico</span>
-                <span class="tag">Auxiliar Administrativo</span>
-                <span class="tag">Excel Avançado</span>
-                <span class="tag">HTML e CSS</span>
-                <span class="tag">Rede de Computadores</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Segurança da Informação</span>
-                <span class="tag">Hardware</span>
-                <span class="tag">Get Connected</span>
-                <span class="tag">Introduction to Cybersecurity</span>
-                <span class="tag">Introduction to IoT</span>
-                <span class="tag">NDG Linux Unhatched</span>
+        <section id="cursos" class="section section-alt reveal">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">06 — Aprendizado contínuo</span>
+                    <h2>Cursos e certificações</h2>
+                    <p class="section-sub">10 certificações concluídas entre 2023 e 2026.</p>
+                </div>
+
+                <ul class="course-list stagger">
+                    <li>
+                        <div>
+                            <strong>RAG — ChromaDB, LlamaIndex e Python</strong>
+                            <span>DIO + Santander</span>
+                        </div>
+                        <span class="course-year">2026</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Basics of JavaScript</strong>
+                            <span>Cisco</span>
+                        </div>
+                        <span class="course-year">2025</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Java do Zero ao Profissional</strong>
+                            <span>Udemy</span>
+                        </div>
+                        <span class="course-year">2024</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Java POO</strong>
+                            <span>Curso em Vídeo</span>
+                        </div>
+                        <span class="course-year">2024</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Git e GitHub</strong>
+                            <span>Curso em Vídeo</span>
+                        </div>
+                        <span class="course-year">2024</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Auxiliar de Suporte Técnico</strong>
+                            <span>Armazém dos Bits</span>
+                        </div>
+                        <span class="course-year">2024</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Auxiliar Administrativo</strong>
+                            <span>FUNDEC</span>
+                        </div>
+                        <span class="course-year">2023</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Excel Avançado</strong>
+                            <span>FUNDEC</span>
+                        </div>
+                        <span class="course-year">2023</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>HTML e CSS</strong>
+                            <span>Curso em Vídeo</span>
+                        </div>
+                        <span class="course-year">2023</span>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Linux</strong>
+                            <span>Curso em Vídeo</span>
+                        </div>
+                        <span class="course-year">2023</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section id="contato" class="fade-in">
-            <h3 class="section-title">Contato</h3>
-            <div class="grid contact-grid">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lucaslimasandin@gmail.com" target="_blank"
-                    class="card btn-contact">Email</a>
-                <a href="http://github.com/wuzuy/" target="_blank" class="card btn-contact">GitHub</a>
-                <a href="https://www.linkedin.com/in/lucasmatheusls/" target="_blank"
-                    class="card btn-contact">LinkedIn</a>
-                <a href="https://www.instagram.com/lucas.mlswz/" target="_blank" class="card btn-contact">Instagram</a>
+        <section id="contato" class="section contact reveal">
+            <div class="wrap">
+                <div class="contact-card">
+                    <div class="contact-main">
+                        <span class="eyebrow">07 — Contato</span>
+                        <h2>Pronto para o próximo desafio</h2>
+                        <p>
+                            Estou aberto a oportunidades de estágio em TI, projetos freelance e conversas sobre
+                            tecnologia. Vamos construir algo juntos?
+                        </p>
+
+                        <div class="contact-actions">
+                            <a href="https://wa.me/5521970953058" target="_blank" rel="noopener"
+                                class="btn btn-primary btn-lg">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lucaslimasandin@gmail.com"
+                                target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                                    <path d="m3 7 9 6 9-6" />
+                                </svg>
+                                Enviar e-mail
+                            </a>
+                            <a href="https://www.linkedin.com/in/lucasmatheusls/" target="_blank" rel="noopener"
+                                class="btn btn-outline btn-lg">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path
+                                        d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21h-4V9Z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
+
+                        <div class="contact-links">
+                            <a href="https://www.instagram.com/lucas.mlswz/" target="_blank"
+                                rel="noopener">Instagram</a>
+                            <span>·</span>
+                            <a href="https://github.com/wuzuy/" target="_blank" rel="noopener">github.com/wuzuy</a>
+                            <span>·</span>
+                            <a href="assets/curriculo-lucas-sandin.pdf" download>Currículo em PDF</a>
+                        </div>
+                    </div>
+
+                    <aside class="contact-side">
+                        <div class="contact-item">
+                            <span>E-mail</span>
+                            <a href="mailto:lucaslimasandin@gmail.com">lucaslimasandin@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>WhatsApp</span>
+                            <a href="https://wa.me/5521970953058" target="_blank" rel="noopener">+55 21 97095-3058</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>Localização</span>
+                            <strong>Duque de Caxias, RJ</strong>
+                        </div>
+                        <div class="contact-item">
+                            <span>Disponibilidade</span>
+                            <strong>Estágio · Freelance</strong>
+                        </div>
+                        <div class="contact-item">
+                            <span>Retorno</span>
+                            <strong>Em até 24h</strong>
+                        </div>
+                        <div class="contact-item contact-item-status">
+                            <span class="pulse-dot"></span>
+                            <strong>Aberto a novas oportunidades</strong>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Modal Base -->
-    <div id="project-modal" class="modal-overlay hidden">
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <span>© <span id="year">2026</span> Lucas Sandin. Todos os direitos reservados.</span>
+            <span>Feito com dedicação e código.</span>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <button class="close-btn" onclick="closeModal()" aria-label="Fechar">&times;</button>
             <h2 id="modal-title">Título</h2>
             <div id="modal-desc" style="margin-top: 10px;">Descrição do projeto...</div>
             <div id="modal-tags" class="tags-container" style="margin: 15px 0;"></div>
             <div class="modal-actions">
-                <a id="modal-link-github" href="#" target="_blank" class="btn">GitHub</a>
+                <a id="modal-link-github" href="#" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
                 <a id="modal-link-page" href="#" class="btn btn-outline">Ver Detalhes</a>
             </div>
         </div>
